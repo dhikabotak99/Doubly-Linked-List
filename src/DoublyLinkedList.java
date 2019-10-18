@@ -79,4 +79,15 @@ public class DoublyLinkedList {
         }
         size--;
     }
+    
+    public boolean findByKey(String key){
+        Node current = head;
+        while(!current.getData().equals(key)){
+            if (current.next==null) {
+                return false;
+            }
+            current=current.next;
+        }
+        return true;
+    }
 }
