@@ -103,4 +103,15 @@ public class DoublyLinkedList {
             System.out.println("Doubly Linked List Kosong!");
         }
     }
+    
+    public String update(String data, String key){
+        Node current = head;
+        while(!current.getData().equals(key)){
+            if (current.next==null) {
+                return "Gagal Update";
+            }
+        }
+        current.setData(data);
+        return "Berhasil Update";
+    }
 }
