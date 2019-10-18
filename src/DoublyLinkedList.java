@@ -118,4 +118,9 @@ public class DoublyLinkedList {
     public boolean isEmpty(){
         return(head==null && tail == null);
     }
+    
+    public void makeEmpty(){
+        head=null;
+        tail=null;
+    }
 }
