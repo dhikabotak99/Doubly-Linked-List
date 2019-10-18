@@ -114,4 +114,8 @@ public class DoublyLinkedList {
         current.setData(data);
         return "Berhasil Update";
     }
+    
+    public boolean isEmpty(){
+        return(head==null && tail == null);
+    }
 }
