@@ -12,4 +12,18 @@ public class DoublyLinkedList {
         this.tail=null;
         this.size=0;
     }
+    
+    public void addFirst(String data){
+        Node newNode = new Node(data);
+        if (head==null &&tail==null) {
+            head = newNode;
+            tail = head;
+        }
+        else{
+            head.prev=newNode;
+            newNode.next=head;
+            head=newNode;
+        }
+        size++;
+    }
 }
