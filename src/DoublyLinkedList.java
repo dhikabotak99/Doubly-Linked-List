@@ -67,4 +67,16 @@ public class DoublyLinkedList {
         }
         size--;
     }
+    
+    public void deteteLast(){
+        if (head==tail) {
+            head=null;
+            tail=null;
+        }
+        else{
+            tail=tail.prev;
+            tail.next=null;
+        }
+        size--;
+    }
 }
