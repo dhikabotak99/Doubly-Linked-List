@@ -90,4 +90,17 @@ public class DoublyLinkedList {
         }
         return true;
     }
+    
+    public void display(){
+        if (head!=null) {
+            Node current = head;
+            while(current!=null){
+                System.out.print(current.getData()+" ");
+                current=current.next;
+            }
+        }
+        else{
+            System.out.println("Doubly Linked List Kosong!");
+        }
+    }
 }
