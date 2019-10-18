@@ -40,4 +40,19 @@ public class DoublyLinkedList {
         }
         size++;
     }
+    
+    public void addAfter(String data, String key){
+        Node newNode = new Node(data);
+        Node current = head;
+        
+        while(!current.getData().equals(key)){
+            current=current.next;
+        }
+        
+        newNode.next = current.next;
+        current.next.prev=newNode;
+        current.next=newNode;
+        newNode.prev=current;
+        size++;
+    }
 }
