@@ -55,4 +55,16 @@ public class DoublyLinkedList {
         newNode.prev=current;
         size++;
     }
+    
+    public void deleteFirst(){
+        if (head==tail) {
+            head=null;
+            tail=null;
+        }
+        else{
+            head=head.next;
+            head.prev=null;
+        }
+        size--;
+    }
 }
