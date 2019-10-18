@@ -34,9 +34,9 @@ public class DoublyLinkedList {
             tail=head;
         }
         else{
-            head.prev=newNode;
-            newNode.next=head;
-            head=newNode;
+            tail.prev=newNode;
+            newNode.next=tail;
+            tail=newNode;
         }
         size++;
     }
