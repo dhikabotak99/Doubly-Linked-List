@@ -15,9 +15,23 @@ public class DoublyLinkedList {
     
     public void addFirst(String data){
         Node newNode = new Node(data);
-        if (head==null &&tail==null) {
+        if (head==null && tail==null) {
             head = newNode;
             tail = head;
+        }
+        else{
+            head.prev=newNode;
+            newNode.next=head;
+            head=newNode;
+        }
+        size++;
+    }
+    
+    public void addLast(String data){
+        Node newNode= new Node(data);
+        if (head==null && tail==null) {
+            head=newNode;
+            tail=head;
         }
         else{
             head.prev=newNode;
